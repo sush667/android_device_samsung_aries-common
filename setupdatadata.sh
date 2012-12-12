@@ -7,6 +7,9 @@
 
 PATH=/system/bin/:/system/xbin/
 
+busybox date >>/data/setupdata.txt
+exec >>/data/setupdata.txt 2>&1
+
 function migrate_datadata {
     # Migrate data from /datadata to /data/data
     if test -h /data/data ; then
@@ -50,9 +53,11 @@ VOLD_DECRYPT="`getprop vold.decrypt`"
 if test "$CRYPTO_STATE" = "unencrypted" ; then
     if test "$VOLD_DECRYPT" = "" ; then
         # Normal unencrypted boot
+	echo "Normal unencrypted boot"
         if test -e /data/data/.nodatadata ; then
             migrate_datadata
         else
+	    echo "creating symlink to /datadata"
             rmdir /data/data
             ln -s /datadata /data/data
 
@@ -66,7 +71,9 @@ if test "$CRYPTO_STATE" = "unencrypted" ; then
 else
     if test "$VOLD_DECRYPT" = "trigger_post_fs_data" ; then
         # Encrypted boot (after decryption)
+	echo "Encrypted boot"
         migrate_datadata
     fi
     # else: Encrypted boot (before decryption), do nothing
+echo "Encrypted boot (before decryption), do nothing"
 fi
