@@ -4,6 +4,10 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 # LVM Volumes
-/dev/lvpool/secondary_system         /system               ext4      ro   wait
-/dev/lvpool/userdata       /data                 ext4      noatime,nodev,nosuid,nomblk_io_submit,errors=panic   wait,encryptable=footer
+/dev/lvpool/secondary_system    /system               	ext4    ro   wait
+/dev/lvpool/userdata       	/data                 	ext4    noatime,nodev,nosuid,nomblk_io_submit,errors=panic   wait,encryptable=footer
+
+#dualboot
+/data/dalvik-cache-secondary 	/data/dalvik-cache 	none 	defaults,bind 0 0
+/data/system-secondary 		/data/system 		none 	defaults,bind 0 0
 

@@ -7,4 +7,8 @@
 /dev/lvpool/system         /system               ext4      ro   wait
 /dev/lvpool/userdata       /data                 ext4      noatime,nodev,nosuid,nomblk_io_submit,errors=panic   wait,encryptable=footer
 
+#dualboot
+/data/dalvik-cache-primary 	/data/dalvik-cache 	none 		defaults,bind 0 0
+/data/system-primary 		/data/system 		none 		defaults,bind 0 0
+
 
