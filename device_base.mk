@@ -66,6 +66,13 @@ PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/aroma/aromafm.zip:recovery/root/tmp/aromafm.zip \
 	device/samsung/aries-common/aroma/aromafm.zip.cfg:recovery/root/tmp/aromafm.zip.cfg
 
+#dual boot recovery files
+PRODUCT_COPY_FILES += \
+	device/samsung/aries-common/recovery.fstab.primary:recovery/root/etc/recovery.fstab.primary \
+	device/samsung/aries-common/recovery.fstab.secondary:recovery/root/etc/recovery.fstab.secondary \
+	device/samsung/aries-common/primary.fstab:recovery/root/etc/primary.fstab \
+	device/samsung/aries-common/secondary.fstab:recovery/root/etc/secondary.fstab
+
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/cypress-touchkey.kl:system/usr/keylayout/cypress-touchkey.kl \
