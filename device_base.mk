@@ -53,7 +53,8 @@ PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/init.aries.gps.rc:root/init.aries.gps.rc \
 	device/samsung/aries-common/init.aries.usb.rc:root/init.aries.usb.rc \
 	device/samsung/aries-common/init.aries.usb.rc:recovery/root/usb.rc \
-	device/samsung/aries-common/fstab.aries:root/fstab.aries \
+	device/samsung/aries-common/fstab.aries.primary:root/fstab.aries.primary\
+	device/samsung/aries-common/fstab.aries.secondary:root/fstab.aries.secondary\
 	device/samsung/aries-common/lpm.rc:root/lpm.rc \
 	device/samsung/aries-common/ueventd.aries.rc:root/ueventd.aries.rc \
 	device/samsung/aries-common/setupdatadata.sh:root/sbin/setupdatadata.sh
