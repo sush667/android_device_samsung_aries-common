@@ -40,7 +40,7 @@ BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
 BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
 # Kernel Source
-TARGET_KERNEL_SOURCE := kernel/samsung/aries
+TARGET_KERNEL_SOURCE := kernel/samsung/devil
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/aries-common
