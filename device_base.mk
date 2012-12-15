@@ -41,6 +41,8 @@ TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro
 # application settings that are stored in resourced.
 DEVICE_PACKAGE_OVERLAYS := device/samsung/aries-common/overlay
 
+TARGET_KERNEL_CUSTOM_TOOLCHAIN_LINARO := linaro
+
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
 	device/samsung/aries-common/vold.fstab:system/etc/vold.fstab \
