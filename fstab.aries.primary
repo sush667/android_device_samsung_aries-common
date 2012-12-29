@@ -9,6 +9,6 @@
 
 #dualboot
 /data/dalvik-cache-primary 	/data/dalvik-cache 	none 		defaults,bind 0 0
-/data/system-primary 		/data/system 		none 		defaults,bind 0 0
+/data/primary_system 		/data/system 		none 		defaults,bind 0 0
 
 
